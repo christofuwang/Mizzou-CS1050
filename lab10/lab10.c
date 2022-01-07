@@ -1,15 +1,15 @@
-/*
- * CS1050
- * Fall 2021
- * Lab 10
- */
-
+/*****************************************************************************
+ *   Chris Wang
+ *   Lab 10
+ *   CS1050
+ *   Nov 5, 2021
+ *   Fall 2021 Semester
+ *   Pawprint: cwcn6
+ *****************************************************************************/
 
 // includes
 #include <stdio.h>
 #include <ctype.h>
-// Need any other includes?
-
 
 // Symbolic Constants
 #define CLEARTEXT \
