@@ -1,10 +1,12 @@
 /*****************************************************************************
- * CS1050
- * SP2021
- * Lab 11
- * By Chris Wang (cwcn6)
- * March 22, 2021
+ *   Chris Wang
+ *   Lab 11
+ *   CS1050
+ *   Nov 12, 2021
+ *   Fall 2021 Semester
+ *   Pawprint: cwcn6
  *****************************************************************************/
+
 #include <stdio.h>
 #include <string.h>
 #include "fight.h"
