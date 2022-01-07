@@ -1,11 +1,11 @@
-/*************************
- * Name: Chris Wang
- * Class: CS1050
- * Date: Oct 29, 2021
- * Pawprint: cwcn6
- * Lab: #9
- * Semester: Fall 2021
-**************************/
+/*****************************************************************************
+ *   Chris Wang
+ *   Lab 9
+ *   CS1050
+ *   Oct 29, 2021
+ *   Fall 2021 Semester
+ *   Pawprint: cwcn6
+ *****************************************************************************/
 
 #include <stdio.h>
 
@@ -23,7 +23,6 @@ int segString(char * sPtr, int segLen){
         numcount = numcount/segLen;
         return numcount;
 }
-
 
 void revSegString(char * cPtr, int segLen, int numseg){
 
