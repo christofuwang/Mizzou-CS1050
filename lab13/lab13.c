@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "university.h"
-#define OUTBOUNDS -1
-
 /*****************************************************************************
  *   Chris Wang
  *   Lab 13
@@ -12,6 +6,12 @@
  *   Fall 2021 Semester
  *   Pawprint: cwcn6
  *****************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "university.h"
+#define OUTBOUNDS -1
 
 // Stubs for functions you need to implement
 Course GetCourseByDeptAndNumber(char * dept, int number)
