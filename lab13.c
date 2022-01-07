@@ -63,13 +63,10 @@ void PrintCourse(Course course)
         if(course.number==OUTBOUNDS){
                 ;
         }
-
         else{
                 printf("Id: %d/ Dept: %s/ Number: %d/ Name: %s/ Instructor: %s %s",course.id,course.dept,course.number,course.name,course.instructor_fname,course.instructor_lname);
         }
-
 }
-
 
 //////////////////////////////////////////////////////////////
 // Stubs for bonus functions you may choose to implement
