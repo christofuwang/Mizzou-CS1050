@@ -16,6 +16,7 @@ typedef struct _Movie {
         long gross;
         int year;
 } Movie;
+
 int main(int argc, char *argv[]) {
 
         char * Ascending = "Ascending";
