@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <malloc.h>
 
 typedef struct _Movie {
         char name[256];
@@ -37,27 +38,9 @@ int main(int argc, char *argv[]) {
         int count = 0;
 
         if(argv[2] == NULL){
-                Movie movies[256];
-          
-                while (!feof(fp)) {
-                        fscanf(fp, "%s %ld %d",
-                        movies[count].name,
-                        &movies[count].gross,
-                        &movies[count].year);
-                        count++;
-                }
-          
                 printf("\n");
-                printf("Original Movies:");
-                printf("\n%39sMovie:%5sGross:%1sYear:\n"," "," "," ");
-          
-                for (int x=0; x<count-1; x++) {
-                        printf("%45s %10ld %d\n",
-                        movies[x].name,
-                        movies[x].gross,
-                        movies[x].year);
-                }
-                exit(0);
+                argv[3] = Ascending;
+                argv[2] = Title;
         }
 
         if(strcmp(argv[2],Title)&&strcmp(argv[2],Year)&&strcmp(argv[2],Gross)!=0){
@@ -67,10 +50,8 @@ int main(int argc, char *argv[]) {
   
         if(argv[3]!=NULL){
                 if(strcmp(argv[3],Ascending)&&strcmp(argv[3],Descending)!=0){
-                        if(argv[3] != NULL){
-                                printf(" - sort_order must be one of Ascending or Descending if specified\n");
-                                exit(0);
-                        }
+                        printf(" - sort_order must be one of Ascending or Descending if specified\n");
+                        exit(0);
                 }
         }
 
@@ -78,7 +59,15 @@ int main(int argc, char *argv[]) {
                 argv[3] = Ascending;
         }
         
-        Movie movies[256];
+        for(char c = getc(fp); c != EOF; c = getc(fp)){
+                        if(c== '\n'){
+                                count = count + 1;
+                        }
+        }
+        Movie * movies = NULL;
+        movies = malloc(count*sizeof(Movie));
+        count = 0;
+        rewind(fp);
         while (!feof(fp)) {
                 fscanf(fp, "%s %ld %d",
                 movies[count].name,
@@ -204,5 +193,6 @@ int main(int argc, char *argv[]) {
                 movies[x].gross,
                 movies[x].year);
         }
+        free(movies);
         fclose(fp);
 }
